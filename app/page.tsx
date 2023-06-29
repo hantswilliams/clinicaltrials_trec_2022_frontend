@@ -1,32 +1,23 @@
-import { Card, Title, Text } from '@tremor/react';
-import { queryBuilder } from '../lib/planetscale';
-import Search from './search';
-import UsersTable from './table';
-
+import { Title, Text } from '@tremor/react';
 export const dynamic = 'force-dynamic';
 
-export default async function IndexPage({
-  searchParams
-}: {
-  searchParams: { q: string };
-}) {
-  const search = searchParams.q ?? '';
-  const users = await queryBuilder
-    .selectFrom('users')
-    .select(['id', 'name', 'username', 'email'])
-    .where('name', 'like', `%${search}%`)
-    .execute();
+export default async function IndexPage() {
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
-      <Title>Users</Title>
+      <Title>Clinical Trial TREC 2022 Data</Title>
       <Text>
-        A list of users retrieved from a MySQL database (PlanetScale).
+          <p> This is a VERY preliminary analysis, basic processing of the data </p>  
+          <a
+            className="text-blue-500 hover:text-blue-700"
+            href="https://www.trec-cds.org/2023.html"
+            target="_blank"
+            rel="noreferrer"
+          > 
+            found here 
+          </a>
       </Text>
-      <Search />
-      <Card className="mt-6">
-        <UsersTable users={users} />
-      </Card>
+
     </main>
   );
 }
