@@ -1,6 +1,9 @@
 import { Title, Text } from '@tremor/react';
 export const dynamic = 'force-dynamic';
 
+import TrialTypes from '../components/trial_types';
+import TrialTypesTotals from '../components/trial_source_total';
+
 export default async function IndexPage() {
 
   return (
@@ -19,6 +22,11 @@ export default async function IndexPage() {
           </a>
         </p>
       </Text>
+
+      <TrialTypes />
+
+      <br />
+      <TrialTypesTotals />
 
     </main>
   );
