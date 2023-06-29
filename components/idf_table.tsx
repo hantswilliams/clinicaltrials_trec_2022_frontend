@@ -19,10 +19,10 @@ import {
     return (
       <Card>
         <Title>IDF Table of Example Terms</Title>
-        <Text> Terms that are that the beginning of the table, found in buckets 0-3, are the worst terms, those
-            that are not good for distinguishing between documents or studies. The terms at the end of the table,
+        <Text> Terms that are that the beginning of the table, found in buckets 0-3, are the worst terms and
+             are not good at distinguishing between documents or studies. The terms at the end of the table,
             found in buckets 10-11, 11-12, 12+, are the best terms, those that are good for 
-            distinguishing between documents or studies.
+            distinguishing between documents or studies. The purpose of this table is to just provide examples. 
         </Text>
         <Table className="mt-5">
           <TableHead>

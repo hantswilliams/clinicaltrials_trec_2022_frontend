@@ -10,11 +10,11 @@ export default function IdfBuckets() {
     return (
       <Card>
         <Title>IDF Terms</Title>
-        <Text>Approximatley 300k plus terms identified from TF-IDF analysis. IDF scores that are low, 
-            say a 1 or 4, mean the terms were common and not good ways of distinguishing between documents 
-            or studies, while a higher IDF means it is a unique term that can distinguish it. To display this information
-            more efficency, have created some buckets of IDF scores to them perform counts of how many values were
-            good for distinguishing, high number, buckets 10-11, 11-12, 12+, versus lower. </Text>
+        <Text>Approximatley 300k plus terms identified from IDF analysis. For interpretation, IDF scores that are low, 
+            say a 1 or 4, mean the terms were common, and not good at distinguishing between documents 
+            or studies. While a higher IDF means it is a unique term, that can distinguish between docs. 
+            To display this information more efficency, I have created some buckets to group IDF scores, and then performed 
+            counts of how many IDF terms fall into each bucket. Low is bad distinguisher. High is good distinguisher. </Text>
         <Flex className="mt-6">
             <Text>IDF Bin</Text>
             <Text className="text-right">Term Counts</Text>
