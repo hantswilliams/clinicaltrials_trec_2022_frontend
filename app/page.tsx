@@ -2,7 +2,10 @@ import { Title, Text } from '@tremor/react';
 export const dynamic = 'force-dynamic';
 
 import TrialTypes from '../components/trial_types';
+import TrialYears from '../components/trial_year';
 import TrialTypesTotals from '../components/trial_source_total';
+import IdfBuckets from '../components/idf_buckets';
+import IdfTable from '../components/idf_table';
 
 export default async function IndexPage() {
 
@@ -23,10 +26,21 @@ export default async function IndexPage() {
         </p>
       </Text>
 
+      <br />
+      <TrialYears />
+
+      <br />
       <TrialTypes />
 
       <br />
       <TrialTypesTotals />
+
+      <br />
+      <IdfBuckets />
+
+      <br />
+      <IdfTable />
+
 
     </main>
   );
